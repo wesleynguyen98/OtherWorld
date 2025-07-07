@@ -25,7 +25,7 @@ export default function Portal({ onClose }: { onClose: () => void }) {
         >
           {/* Breathing image animation */}
           <motion.img
-            src="../public/coraline-other-world-portal.jpg"
+            src="/coraline-other-world-portal.jpg"
             alt="Coraline Portal"
             className="w-full h-full object-cover cursor-pointer"
             onClick={handleClick}
