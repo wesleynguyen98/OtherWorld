@@ -1,18 +1,16 @@
-import { useState } from "react";
-import Portal from "./portal.tsx";
+import { Route, Routes } from "react-router-dom";
+import PortalPage from "./pages/PortalPage.tsx";
+
+import HomePage from "./pages/HomePage.tsx";
 
 function App() {
-  const [showPortal, setShowPortal] = useState(true);
+
 
   return (
-    <div className="h-screen w-screen bg-[#f5f0e6]">
-      {showPortal && <Portal onClose={() => setShowPortal(false)} />}
-      {!showPortal && (
-        <div className="flex items-center justify-center h-full text-white text-xl">
-          🎉 The world behind the portal is now revealed.
-        </div>
-      )}
-    </div>
+    <Routes>
+      <Route path="/" element={<PortalPage />} />
+      <Route path="/home" element={<HomePage />} />
+    </Routes>
   );
 }
 

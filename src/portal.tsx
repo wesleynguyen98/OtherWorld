@@ -3,11 +3,16 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import useScrollLocks from "./hooks/useScrollLocks";
 
+/* Portal component takes an onClose function as a prop.
+   This function is called when the portal is closed, 
+   allowing for navigation or other actions. */
 export default function Portal({ onClose }: { onClose: () => void }) {
   const [isOpening, setIsOpening] = useState(false);
   
-  useScrollLocks(true);
+  useScrollLocks(true); // Lock scroll when portal is open
 
+  /* Sets isOpening to true and calls 
+   the passed in onClose f() after a delay. */
   const handleClick = () => {
     setIsOpening(true);
     setTimeout(() => onClose(), 1200);
@@ -16,6 +21,7 @@ export default function Portal({ onClose }: { onClose: () => void }) {
   return (
     <AnimatePresence>
       {!isOpening && (
+        /* Unmounting component animates with exit funcion */
         <motion.div className="overflow-hidden" exit={{ opacity: 0, transition: { duration: 1 } }}>
           <motion.div
             className="relative w-full h-full overflow-hidden"
