@@ -1,9 +1,12 @@
 // src/Portal.tsx
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import useScrollLocks from "./hooks/useScrollLocks";
 
 export default function Portal({ onClose }: { onClose: () => void }) {
   const [isOpening, setIsOpening] = useState(false);
+  
+  useScrollLocks(true);
 
   const handleClick = () => {
     setIsOpening(true);
@@ -13,9 +16,9 @@ export default function Portal({ onClose }: { onClose: () => void }) {
   return (
     <AnimatePresence>
       {!isOpening && (
-        <motion.div exit={{ opacity: 0, transition: { duration: 1 } }}>
+        <motion.div className="overflow-hidden" exit={{ opacity: 0, transition: { duration: 1 } }}>
           <motion.div
-            className="relative w-full h-full"
+            className="relative w-full h-full overflow-hidden"
             exit={{ opacity: 0, transition: { duration: 1 } }}
           >
             {/* Breathing image animation */}
