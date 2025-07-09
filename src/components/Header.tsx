@@ -1,4 +1,3 @@
-import { FaSearch } from "react-icons/fa";
 import NavBar from "./NavBar";
 export default function Header() {
   return (
