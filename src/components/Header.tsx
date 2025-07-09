@@ -1,9 +1,13 @@
+import { FaSearch } from "react-icons/fa";
+import NavBar from "./NavBar";
 export default function Header() {
   return (
-    <header className="w-full flex items-center justify-between">
-      <div className="flex items-center">
-        <img src="/coraline-logo.png" alt="Coraline Logo" className="h-10 object-contain"></img>
-      </div>
-    </header>
+    <div>
+      <nav className="flex justify-between items-center w-[98%] h-[15vh] mx-auto bg-[#f5f0e6]">
+
+        <NavBar />
+
+      </nav>
+    </div>
   );
 }
