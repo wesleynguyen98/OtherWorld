@@ -21,16 +21,20 @@ export default function NavBar() {
             Sign In
           </button>
         </li>
-        <li>
-          <button className="bg-[#f5f0e6] hover:bg-amber-200 border-gray-300 text-center rounded-md px-4 py-2 whitespace-nowrap">
-            Sign In
-          </button>
-        </li>
-        <li>
-          <button className="bg-[#f5f0e6] hover:bg-amber-200 border-gray-300 text-center rounded-md px-4 py-2 whitespace-nowrap">
-            Sign In
-          </button>
-        </li>
+        <Link to="/register">
+          <li>
+            <button className="bg-[#f5f0e6] hover:bg-amber-200 border-gray-300 text-center rounded-md px-4 py-2 whitespace-nowrap">
+              Register
+            </button>
+          </li>
+        </Link>
+        <Link to="/login">
+          <li>
+            <button className="bg-[#f5f0e6] hover:bg-amber-200 border-gray-300 text-center rounded-md px-4 py-2 whitespace-nowrap">
+              Sign In
+            </button>
+          </li>
+        </Link>
       </ul>
     </nav>
   );
