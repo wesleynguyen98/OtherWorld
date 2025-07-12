@@ -1,28 +1,28 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+
 
 export default function HomePage() {
   return (
-    <div className="relative h-screen w-screen overflow-x-hidden  bg-[#f5f0e6]">
-      {/* 1) Background layer */}
-      {/* <div
-        className="
-          absolute inset-0 
-          bg-[url('/sandbag-texture.jpg')]
-          bg-cover bg-center bg-no-repeat
-          z-0
-        "
-      /> */}
-
-      {/* 2) Content layer */}
-      <div className="relative flex flex-col h-full w-full z-10">
-        <Header />
+    <div className="flex flex-col min-h-screen w-full overflow-x-hidden bg-[#f5f0e6]">
+      <div className="relative flex-col w-full overflow-x-hidden">
         <div className="flex-grow p-4">
-          🔴 Hello, Tailwind is working!
           <img src="/coraline-jacket.png" alt="Coraline Logo" className="w-[500px] h-auto object-contain" />
         </div>
-        <Footer />
+
+        <div className="absolute top-0 right-0 h-full w-full bg-black text-white z-10 flex items-center justify-end max-w-screen pr-8"
+          style={{
+            clipPath: "polygon(70% 0%, 100% 0%, 100% 100%, 50% 100%)"
+          }}>
+
+          <div className="text-right">
+            <h1 className="text-4xl font-bold mb-4">Welcome to the Other World</h1>
+            <p className="text-lg text-gray-300">
+              Step into a world where shadows breathe and buttons blink.
+            </p>
+          </div>
+        </div>
+
       </div>
+
     </div>
   );
 }

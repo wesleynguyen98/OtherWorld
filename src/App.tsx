@@ -1,21 +1,18 @@
 import { Route, Routes } from "react-router-dom";
-import PortalPage from "./pages/PortalPage.tsx";
-import LoginPage from "./pages/LoginPage.tsx";
-import RegisterPage from "./pages/RegisterPage.tsx";
+import Layout from "./components/Layout";
+import CharactersPage from "./pages/CharactersPage";
 
 import HomePage from "./pages/HomePage.tsx";
 
 function App() {
-
-
   return (
     <Routes>
-      <Route path="/" element={<PortalPage />} />
-      <Route path="/home" element={<HomePage />} />
-      <Route path="/login" element={<LoginPage />} />
-      <Route path="/register" element={<RegisterPage />} />
+      <Route element={<Layout />}>
+        <Route path="/home" element={<HomePage />} />
+        {/* <Route path="/characters" element={<CharactersPage />} /> */}
+      </Route>
     </Routes>
+
   );
 }
-
 export default App;

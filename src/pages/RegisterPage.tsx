@@ -1,10 +1,9 @@
 export default function RegisterPage() {
     return (
-        <div className="min-h-screen min-w-screen bg-[#f5f0e6] flex items-center justify-center p-4">
+        <div className="min-h-screen min-w-screen bg-[#f5f0e6] flex items-center justify-center p-4 gap-50">
+            <img src="/coraline-self-clear.png" alt="Coraline Logo" className="w-[400px] h-auto object-contain" />
             <div className="max-w-md w-full bg-white rounded-xl shadow-lg p-8">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Register</h2>
-
-
                 <form className="space-y-4">
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">First Name</label>

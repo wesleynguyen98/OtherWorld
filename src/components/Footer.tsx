@@ -15,43 +15,25 @@ export default function Footer() {
         </div>
 
         <div className="flex ml-auto space-x-6 text-white">
-          <ul className="space-y-2">
-            <li>
-              <a href="#" className="hover:underline">
-                Characters
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Parks
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Disney
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Pixar
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Star Wars
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Marvel
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                National Geographic
-              </a>
-            </li>
-          </ul>
+          <div className="flex items-center">
+            <ul className="space-y-2">
+              <li>
+                <a href="#" className="hover:underline">
+                  Characters
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline">
+                  Lore
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline">
+                  Laika
+                </a>
+              </li>
+            </ul>
+          </div>
 
           <div className="border-l border-gray-300"></div>
           <ul className="space-y-2">
@@ -82,7 +64,7 @@ export default function Footer() {
             </li>
             <li>
               <a href="#" className="hover:underline">
-                Store Locator
+                Store
               </a>
             </li>
           </ul>

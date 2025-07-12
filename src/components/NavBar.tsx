@@ -18,7 +18,12 @@ export default function NavBar() {
         {/* <li className="text-black cursor-pointer hover:bg-violet-600 transition px-8 py-3 rounded-xl">Lore</li> */}
         <li>
           <button className="bg-[#f5f0e6] hover:bg-amber-200 border-gray-300 text-center rounded-md px-4 py-2 whitespace-nowrap">
-            Sign In
+            Characters
+          </button>
+        </li>
+        <li>
+          <button className="bg-[#f5f0e6] hover:bg-amber-200 border-gray-300 text-center rounded-md px-4 py-2 whitespace-nowrap">
+            Lore
           </button>
         </li>
         <Link to="/register">
