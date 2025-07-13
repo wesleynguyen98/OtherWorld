@@ -1,17 +1,17 @@
-import { signInWithPopup } from "firebase/auth";
-import { auth, googleProvider } from "../../firebase";
+// import { signInWithPopup } from "firebase/auth";
+// import { auth, googleProvider } from "../../firebase";
 
 export default function LoginPage() {
-    const loginWithGoogle = async () => {
-        try {
-            // Sign in with Google using Firebase authentication
-            let result = await signInWithPopup(auth, googleProvider);
-            let user = result.user;
-            console.log(user);
-        } catch (error) {
-            console.error("Error signing in with Google:", error);
-        }
-    }
+    // const loginWithGoogle = async () => {
+    //     try {
+    //         // Sign in with Google using Firebase authentication
+    //         let result = await signInWithPopup(auth, googleProvider);
+    //         let user = result.user;
+    //         console.log(user);
+    //     } catch (error) {
+    //         console.error("Error signing in with Google:", error);
+    //     }
+    // }
 
     return (
         <div className="min-h-screen min-w-screen bg-[#f5f0e6] flex items-center justify-center p-4 gap-50">
@@ -49,7 +49,8 @@ export default function LoginPage() {
                     <button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2.5 rounded-lg transition-colors">
                         Sign In
                     </button>
-                    <button onClick={loginWithGoogle} className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2.5 rounded-lg transition-colors">
+                    {/* onClick={loginWithGoogle} */}
+                    <button  className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2.5 rounded-lg transition-colors">
                         Sign In With Google
                     </button>
                 </form>
