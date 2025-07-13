@@ -9,7 +9,7 @@ export default function NavBar() {
         <img
           src="/coraline-logo.png"
           alt="Coraline Logo"
-          className="w-[140px] px-4 h-auto object-contain"
+          className="w-[140px] py-2 h-auto object-contain"
         />
       </Link>
 
